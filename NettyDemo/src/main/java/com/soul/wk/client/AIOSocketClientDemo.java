@@ -2,8 +2,10 @@ package com.soul.wk.client;
 
 import com.soul.wk.clienthandler.AsyncTimeClientHandler;
 
-import java.awt.print.Pageable;
-
+/**
+ * @author WK
+ * AIO 客户端实例
+ */
 public class AIOSocketClientDemo {
 
     private static final String HOST = "localhost";

@@ -1,12 +1,8 @@
-package com.soul.wk.netty.third.handler;
+package com.soul.wk.netty.delimiterframe.handler;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelHandlerInvoker;
-import io.netty.util.concurrent.EventExecutorGroup;
 
 public class EchoClientHandler extends ChannelHandlerAdapter {
 

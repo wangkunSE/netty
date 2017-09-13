@@ -1,7 +1,7 @@
-package com.soul.wk.netty.first.client;
+package com.soul.wk.netty.noframe.client;
 
 
-import com.soul.wk.netty.first.handler.TimeClientHandler;
+import com.soul.wk.netty.noframe.handler.TimeClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

@@ -12,7 +12,8 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
     private byte[] req;
 
     public TimeClientHandler() {
-        req = "QUERY TIME ORDER".getBytes();
+        req = ("QUERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
+//        req = "QUERY TIME ORDER".getBytes();
     }
 
     @Override
@@ -29,11 +30,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
-        ByteBuf buf = (ByteBuf) msg;
-        byte[] req = new byte[buf.readableBytes()];
-        buf.readBytes(req);
-
-        String body = new String(req, "utf-8");
+        String body = (String) msg;
         System.out.println("Now is : " + body + " ; the counter is : " + ++counter);
 
     }

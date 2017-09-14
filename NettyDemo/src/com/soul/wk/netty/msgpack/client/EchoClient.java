@@ -38,8 +38,8 @@ public class EchoClient {
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline().addLast("frameDecoder ", new LengthFieldBasedFrameDecoder(65535, 0, 2, 0, 2));
                             socketChannel.pipeline().addLast("message decoder", new MessageDecoder());
-                            socketChannel.pipeline().addLast("frameEcoder", new LengthFieldPrepender(2));
-                            socketChannel.pipeline().addLast("message ecoder", new MessageEncoder());
+                            socketChannel.pipeline().addLast("frameEncoder", new LengthFieldPrepender(2));
+                            socketChannel.pipeline().addLast("message encoder", new MessageEncoder());
                             socketChannel.pipeline().addLast(new EchoClientHandler());
                         }
                     });

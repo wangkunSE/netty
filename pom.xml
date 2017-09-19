@@ -43,6 +43,13 @@
             <version>2.0.0.Final</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.jibx/jibx-run -->
+        <dependency>
+            <groupId>org.jibx</groupId>
+            <artifactId>jibx-run</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
 
     </dependencies>
     <build>

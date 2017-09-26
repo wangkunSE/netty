@@ -14,6 +14,9 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
+import java.nio.channels.Selector;
+import java.util.HashMap;
+
 public class EchoClient {
 
     private static final String HOST = "localhost";
@@ -24,6 +27,7 @@ public class EchoClient {
         EventLoopGroup group = new NioEventLoopGroup();
 
         try {
+
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(group).channel(NioSocketChannel.class)
                     .option(ChannelOption.TCP_NODELAY, true)

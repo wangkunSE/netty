@@ -12,51 +12,51 @@ public final class Header {
     private byte priority;
     private Map<String, Object> attachment = new HashMap<>();
 
-    public int getCrcCode() {
+    public final int getCrcCode() {
         return crcCode;
     }
 
-    public void setCrcCode(int crcCode) {
+    public final void setCrcCode(int crcCode) {
         this.crcCode = crcCode;
     }
 
-    public int getLength() {
+    public final int getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public final void setLength(int length) {
         this.length = length;
     }
 
-    public long getSessionID() {
+    public final long getSessionID() {
         return sessionID;
     }
 
-    public void setSessionID(long sessionID) {
+    public final void setSessionID(long sessionID) {
         this.sessionID = sessionID;
     }
 
-    public byte getType() {
+    public final byte getType() {
         return type;
     }
 
-    public void setType(byte type) {
+    public final void setType(byte type) {
         this.type = type;
     }
 
-    public byte getPriority() {
+    public final byte getPriority() {
         return priority;
     }
 
-    public void setPriority(byte priority) {
+    public final void setPriority(byte priority) {
         this.priority = priority;
     }
 
-    public Map<String, Object> getAttachment() {
+    public final Map<String, Object> getAttachment() {
         return attachment;
     }
 
-    public void setAttachment(Map<String, Object> attachment) {
+    public final void setAttachment(Map<String, Object> attachment) {
         this.attachment = attachment;
     }
 

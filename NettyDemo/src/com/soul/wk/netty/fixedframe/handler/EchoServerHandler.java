@@ -8,7 +8,6 @@ import io.netty.channel.ChannelHandlerContext;
 public class EchoServerHandler extends ChannelHandlerAdapter {
 
 
-    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
         String req = (String) msg;
@@ -18,7 +17,6 @@ public class EchoServerHandler extends ChannelHandlerAdapter {
         ctx.writeAndFlush(echo);
     }
 
-    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.close();
     }

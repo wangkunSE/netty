@@ -24,7 +24,6 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
     private static final Logger logger = Logger.getLogger(WebSocketServerHandler.class.getName());
     private WebSocketServerHandshaker handshaker;
 
-    @Override
     protected void messageReceived(ChannelHandlerContext channelHandlerContext, Object msg) throws Exception {
 
         if (msg instanceof FullHttpRequest) {
@@ -127,5 +126,10 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 
         cause.printStackTrace();
         ctx.close();
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o) throws Exception {
+
     }
 }

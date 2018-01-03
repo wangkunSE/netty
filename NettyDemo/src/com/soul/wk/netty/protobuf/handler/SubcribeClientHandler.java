@@ -2,15 +2,11 @@ package com.soul.wk.netty.protobuf.handler;
 
 import com.soul.wk.netty.protobuf.firstdemo.SubscribeReqProto;
 import com.soul.wk.netty.protobuf.firstdemo.SubscribeRespProto;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelHandlerInvoker;
-import io.netty.util.concurrent.EventExecutorGroup;
 
 public class SubcribeClientHandler extends ChannelHandlerAdapter {
 
-    @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
         System.out.println("client active");
@@ -31,7 +27,6 @@ public class SubcribeClientHandler extends ChannelHandlerAdapter {
         return builder.build();
     }
 
-    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("client read");
         SubscribeRespProto.SubscribeResp resp = (SubscribeRespProto.SubscribeResp) msg;
@@ -42,7 +37,6 @@ public class SubcribeClientHandler extends ChannelHandlerAdapter {
 
     }
 
-    @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         System.out.println("client read complete");
         ctx.flush();

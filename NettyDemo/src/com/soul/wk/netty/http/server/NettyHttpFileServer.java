@@ -17,7 +17,7 @@ public class NettyHttpFileServer {
 
     private static final String HOST = "127.0.0.1";
     private static final int PORT = 11123;
-    private static final String DEFAULT_URL = "/NettyDemo/src/com/soul/wk/netty/";
+    private static final String DEFAULT_URL = "/";
 
     public static void main(String[] args) {
 

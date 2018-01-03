@@ -32,7 +32,6 @@ public class HttpFileServerHandler extends
         this.url = url;
     }
 
-    @Override
     public void messageReceived(ChannelHandlerContext ctx,
                                 FullHttpRequest request) throws Exception {
         if (!request.getDecoderResult().isSuccess()) {
@@ -203,6 +202,11 @@ public class HttpFileServerHandler extends
         MimetypesFileTypeMap mimeTypesMap = new MimetypesFileTypeMap();
         response.headers().set(CONTENT_TYPE,
                 mimeTypesMap.getContentType(file.getPath()));
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
+
     }
 }
 

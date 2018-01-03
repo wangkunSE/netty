@@ -11,7 +11,6 @@ public class TimeServerHanler extends ChannelHandlerAdapter {
 
     private int counter;
 
-    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
 
@@ -26,7 +25,6 @@ public class TimeServerHanler extends ChannelHandlerAdapter {
         ctx.writeAndFlush(resp);
     }
 
-    @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
     }

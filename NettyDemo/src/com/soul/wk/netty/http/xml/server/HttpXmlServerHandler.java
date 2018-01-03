@@ -48,7 +48,6 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 public class HttpXmlServerHandler extends
         SimpleChannelInboundHandler<HttpXmlRequest> {
 
-    @Override
     public void messageReceived(final ChannelHandlerContext ctx,
                                 HttpXmlRequest xmlRequest) throws Exception {
         HttpRequest request = xmlRequest.getRequest();
@@ -97,5 +96,10 @@ public class HttpXmlServerHandler extends
                 + "\r\n", CharsetUtil.UTF_8));
         response.headers().set(CONTENT_TYPE, "text/plain; charset=UTF-8");
         ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, HttpXmlRequest httpXmlRequest) throws Exception {
+
     }
 }

@@ -16,7 +16,8 @@
 package com.soul.wk.netty.http.xml;
 
 
-import com.soul.wk.netty.http.xml.pojo.*;
+import com.soul.wk.netty.http.xml.pojo.Order;
+import com.soul.wk.netty.http.xml.pojo.OrderFactory;
 import org.jibx.runtime.*;
 
 import java.io.IOException;

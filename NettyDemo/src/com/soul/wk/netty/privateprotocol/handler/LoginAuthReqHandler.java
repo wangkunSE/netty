@@ -4,16 +4,13 @@ import com.soul.wk.netty.privateprotocol.domain.Header;
 import com.soul.wk.netty.privateprotocol.domain.NettyMessage;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import sun.nio.ch.Net;
 
 public class LoginAuthReqHandler extends ChannelHandlerAdapter {
 
-    @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         ctx.writeAndFlush(buildLoginReq());
     }
 
-    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
         NettyMessage message = (NettyMessage) msg;
